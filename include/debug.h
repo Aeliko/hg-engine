@@ -21,7 +21,7 @@
 //#define DEBUG_SCALED_EXPERIENCE
 
 // DEBUG_BATTLE_SCRIPT_COMMANDS prints out the battle script command names in the desmume window
-//#define DEBUG_BATTLE_SCRIPT_COMMANDS
+#define DEBUG_BATTLE_SCRIPT_COMMANDS
 
 // DEBUG_PRINT_OVERLAY_LOADS prints out overlay loads and unloads in the desmume window
 //#define DEBUG_PRINT_OVERLAY_LOADS
@@ -33,7 +33,7 @@
 //#define DEBUG_SOUND_SBNK_LOADS
 
 // GUARANTEE_CAPTURES guarantees captures
-//#define GUARANTEE_CAPTURES
+#define GUARANTEE_CAPTURES
 
 // DEBUG_SQRT prints debug information for the gpio sqrt function
 //#define DEBUG_SQRT
@@ -51,7 +51,7 @@
 //#define DEBUG_INIT_PC_BOXES_WITH_MONS
 
 // DEBUG_PRINT_HEAP_OVERFLOW_MESSAGES will cause any crash from a heap overflow to display error information
-//#define DEBUG_PRINT_HEAP_OVERFLOW_MESSAGES
+#define DEBUG_PRINT_HEAP_OVERFLOW_MESSAGES
 
 // DEBUG_PRINT_HEAP_OVERFLOW_MESSAGES_ASSERT_FAIL will cause any GF_AssertFail call to display error information, even those that would normally in vanilla work fine
 //#define DEBUG_PRINT_HEAP_OVERFLOW_MESSAGES_ASSERT_FAIL
@@ -63,7 +63,7 @@
 //#define DEBUG_ENDTURN_LOGIC
 
 // DEBUG_BEFORE_MOVE_LOGIC turns on a number of debug prints related to the before-move logic
-//#define DEBUG_BEFORE_MOVE_LOGIC
+// #define DEBUG_BEFORE_MOVE_LOGIC
 
 // DEBUG_PRINT_HEAP_CREATION allows for debug prints on heap creation/deletion
 //#define DEBUG_PRINT_HEAP_CREATION
@@ -72,6 +72,6 @@
 //#define DEBUG_PRINT_HEAP_ALLOCATION
 
 // NOCASH_GBA_PRINT swaps from desmume prints with the syscall to NO$GBA-style prints for use with i.e. melonDS
-#define NOCASH_GBA_PRINT
+// #define NOCASH_GBA_PRINT
 
 #endif // DEBUG_H

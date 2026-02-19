@@ -1,4 +1,4 @@
-// Test: Double Shock - Electric types cannot use Double Shock twice
+// Test: Chatter - Always confuses
 #ifndef GET_TEST_CASE_ONLY
 
 #include "../../../../include/battle.h"
@@ -20,12 +20,12 @@ const struct TestBattleScenario BattleTests[] = {
         .terrain = TERRAIN_NONE,
         .playerParty = {
             {
-                .species = SPECIES_PAWMOT,
+                .species = SPECIES_CHATOT,
                 .level = 50,
                 .form = 0,
-                .ability = ABILITY_NATURAL_CURE,
+                .ability = ABILITY_KEEN_EYE,
                 .item = ITEM_NONE,
-                .moves = { MOVE_DOUBLE_SHOCK, MOVE_NONE, MOVE_NONE, MOVE_NONE },
+                .moves = { MOVE_CHATTER, MOVE_NONE, MOVE_NONE, MOVE_NONE },
                 .hp = FULL_HP,
                 .status = 0,
                 .condition2 = 0,
@@ -55,7 +55,7 @@ const struct TestBattleScenario BattleTests[] = {
             { .species = SPECIES_NONE } },
         .playerScript = { {
                               { ACTION_MOVE_SLOT_1, BATTLER_ENEMY_FIRST },
-                              { ACTION_MOVE_SLOT_1, BATTLER_ENEMY_FIRST },
+                              { ACTION_NONE, 0 },
                               { ACTION_NONE, 0 },
                               { ACTION_NONE, 0 },
                               { ACTION_NONE, 0 },
@@ -75,7 +75,7 @@ const struct TestBattleScenario BattleTests[] = {
             } },
         .enemyScript = { {
                              { ACTION_MOVE_SLOT_1, BATTLER_PLAYER_FIRST },
-                             { ACTION_MOVE_SLOT_1, BATTLER_PLAYER_FIRST },
+                             { ACTION_NONE, 0 },
                              { ACTION_NONE, 0 },
                              { ACTION_NONE, 0 },
                              { ACTION_NONE, 0 },
@@ -94,9 +94,7 @@ const struct TestBattleScenario BattleTests[] = {
                 { ACTION_NONE, 0 },
             } },
         .expectations = {
-            { .expectationType = EXPECTATION_TYPE_HP_BAR, .battlerIDOrPartySlot = BATTLER_ENEMY_FIRST, .expectationValue.hpTaken = { 37, 37, 39, 39, 39, 40, 40, 40, 40, 42, 42, 42, 43, 43, 43, 45 } },
-            { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Pawmot used up all its electricity!" },
-            { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "But it failed!" },
+            { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "The opposing Shuckle became confused!" },
         }
     },
 #ifndef GET_TEST_CASE_ONLY
